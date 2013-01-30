@@ -1,6 +1,6 @@
-*.class
-
-# Package Files #
-*.jar
-*.war
-*.ear
+target
+*.iml
+*.iws
+*.ipr
+.DS_Store
+.idea
