@@ -24,7 +24,7 @@
 
   <parent>
     <groupId>org.piraso</groupId>
-    <artifactId>log4j-context-logger</artifactId>
+    <artifactId>piraso-log4j</artifactId>
     <version>1.1-SNAPSHOT</version>
   </parent>
 
