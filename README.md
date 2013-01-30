@@ -1,4 +1,4 @@
-![P](http://piraso.org/piraso_32.png)iraso [![Build Status](https://buildhive.cloudbees.com/job/piraso/job/piraso/badge/icon)](https://buildhive.cloudbees.com/job/piraso/job/piraso/)
+![P](http://piraso.org/piraso_32.png)iraso Log4j [![Build Status](https://buildhive.cloudbees.com/job/piraso/job/piraso-log4j/badge/icon)](https://buildhive.cloudbees.com/job/piraso/job/piraso-log4j/)
 =======
 
 ### Introduction
