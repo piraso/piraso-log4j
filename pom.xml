@@ -88,7 +88,6 @@
     <swing-layout.version>1.0.3</swing-layout.version>
 
     <commons.collection.version>3.2.1</commons.collection.version>
-    <piraso.client.branding.version>1.0-SNAPSHOT</piraso.client.branding.version>
     <piraso.client.base.version>1.0-SNAPSHOT</piraso.client.base.version>
     <piraso.client.api.version>1.0-SNAPSHOT</piraso.client.api.version>
 
