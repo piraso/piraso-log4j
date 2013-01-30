@@ -36,7 +36,7 @@
     <dependency>
       <groupId>${project.groupId}</groupId>
       <artifactId>log4j-context-logger-api</artifactId>
-      <version>${piraso.version}</version>
+      <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>${project.groupId}</groupId>
