@@ -20,7 +20,6 @@ package org.piraso.api.log4j;
 
 import org.apache.log4j.MDC;
 import org.apache.log4j.NDC;
-import org.piraso.api.entry.*;
 
 import java.util.Date;
 

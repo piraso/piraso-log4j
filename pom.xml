@@ -69,10 +69,29 @@
   </scm>
 
   <modules>
-    <module>log4j-context-logger</module>
+    <module>context-logger</module>
+    <module>headless</module>
+    <module>nbm-client</module>
   </modules>
 
   <properties>
+    <brandingToken>piraso_client</brandingToken>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+    <opencsv.version>2.0</opencsv.version>
+    <junit.version>4.8.1</junit.version>
+    <mokito.version>1.8.4</mokito.version>
+    <junit.dep.version>4.5</junit.dep.version>
+    <netbeans.version>RELEASE721</netbeans.version>
+    <commons.io>2.4</commons.io>
+    <swing-layout.version>1.0.3</swing-layout.version>
+
+    <commons.collection.version>3.2.1</commons.collection.version>
+    <piraso.client.branding.version>1.0-SNAPSHOT</piraso.client.branding.version>
+    <piraso.client.base.version>1.0-SNAPSHOT</piraso.client.base.version>
+    <piraso.client.api.version>1.0-SNAPSHOT</piraso.client.api.version>
+
     <piraso.version>1.1-SNAPSHOT</piraso.version>
     <aspectj.version>1.6.9</aspectj.version>
     <commons.beanutils.version>1.8.3</commons.beanutils.version>
@@ -128,6 +147,21 @@
         </executions>
       </plugin>
     </plugins>
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+          <artifactId>nbm-maven-plugin</artifactId>
+          <version>3.7</version>
+          <extensions>true</extensions>
+          <configuration>
+            <brandingToken>${brandingToken}</brandingToken>
+            <cluster>${brandingToken}</cluster>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
   </build>
 
   <dependencies>

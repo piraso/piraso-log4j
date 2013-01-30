@@ -28,9 +28,9 @@
     <version>1.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>log4j-context-logger-headless</artifactId>
+  <artifactId>piraso-headless-log4j</artifactId>
   <packaging>jar</packaging>
-  <name>log4j-context-logger-headless</name>
+  <name>piraso-headless-log4j</name>
 
   <dependencies>
     <dependency>
