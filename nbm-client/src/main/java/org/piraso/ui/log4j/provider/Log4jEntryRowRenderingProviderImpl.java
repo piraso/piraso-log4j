@@ -19,6 +19,7 @@ package org.piraso.ui.log4j.provider;
 import org.openide.util.lookup.ServiceProvider;
 import org.piraso.api.entry.Entry;
 import org.piraso.api.log4j.Log4jEntry;
+import org.piraso.ui.api.EntryRowColumn;
 import org.piraso.ui.api.EntryRowRenderingProvider;
 
 import javax.swing.*;
@@ -35,7 +36,7 @@ public class Log4jEntryRowRenderingProviderImpl implements EntryRowRenderingProv
     }
 
     @Override
-    public void render(JLabel cell, Entry entry) {
+    public void render(JLabel cell, Entry entry, EntryRowColumn column) {
         Log4jEntry log4j = (Log4jEntry) entry;
 
         if("ERROR".equals(log4j.getLogLevel()) || "FATAL".equals(log4j.getLogLevel())) {
