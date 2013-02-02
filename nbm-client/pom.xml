@@ -24,12 +24,11 @@
   <parent>
     <artifactId>piraso-client-pom</artifactId>
     <groupId>org.piraso</groupId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>piraso-client-log4j</artifactId>
   <packaging>nbm</packaging>
-
   <name>piraso-client-log4j</name>
 
   <dependencies>
