@@ -40,7 +40,7 @@ public class LoggerRepositoryProxyFactory extends AbstractLog4jProxyFactory<Logg
                 }
 
                 // ensure that there is no conflict on springframework aop classes
-                if(category != null && !category.startsWith("org.springframework.aop")) {
+                if(category != null && !category.startsWith("org.springframework.aop") && !category.startsWith("org.piraso")) {
                     Logger logger = (Logger) evt.getReturnedValue();
 
                     if(Log4JLogger.class.isInstance(logger)) {
