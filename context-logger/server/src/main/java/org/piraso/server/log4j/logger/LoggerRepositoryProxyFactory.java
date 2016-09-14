@@ -18,16 +18,43 @@
 
 package org.piraso.server.log4j.logger;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.spi.LoggerRepository;
 import org.piraso.proxy.RegexMethodInterceptorAdapter;
 import org.piraso.proxy.RegexMethodInterceptorEvent;
 import org.piraso.proxy.RegexProxyFactory;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * Proxy factory for {@link LoggerRepository}.
  */
 public class LoggerRepositoryProxyFactory extends AbstractLog4jProxyFactory<LoggerRepository> {
+
+    private static List<String> EXCLUDES = Collections.synchronizedList(new ArrayList<String>());
+
+    static  {
+        addExclude("org.springframework.aop");
+        addExclude("org.piraso");
+    }
+
+    public static void addExclude(String exclude) {
+        EXCLUDES.add(exclude);
+    }
+
+    public static boolean isExclude(String category) {
+        for(String exclude : EXCLUDES) {
+            if(StringUtils.startsWith(category, exclude)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     public LoggerRepositoryProxyFactory() {
         super(new RegexProxyFactory<LoggerRepository>(LoggerRepository.class));
 
@@ -40,7 +67,7 @@ public class LoggerRepositoryProxyFactory extends AbstractLog4jProxyFactory<Logg
                 }
 
                 // ensure that there is no conflict on springframework aop classes
-                if(category != null && !category.startsWith("org.springframework.aop") && !category.startsWith("org.piraso")) {
+                if(category != null && !isExclude(category)) {
                     Logger logger = (Logger) evt.getReturnedValue();
 
                     if(Log4JLogger.class.isInstance(logger)) {
