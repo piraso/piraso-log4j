@@ -39,6 +39,8 @@ public class LoggerRepositoryProxyFactory extends AbstractLog4jProxyFactory<Logg
     static  {
         addExclude("org.springframework.aop");
         addExclude("org.piraso");
+        addExclude("org.owasp");
+        addExclude("Encoder");
     }
 
     public static void addExclude(String exclude) {
